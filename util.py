@@ -1,12 +1,9 @@
 import os
 import cv2
 
-def split_image_types(image_names, range=2):
+def split_image_types(image_names):
     ir_images, color_images = [], []
-
     image_range = len(image_names) // 2
-    print(image_range)
-
     for img in image_names:
         if img[:image_range] == "C0":
             ir_images.append(img)
